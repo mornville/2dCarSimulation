@@ -15,7 +15,7 @@ bg = py.Surface((WIN_WIDTH, WIN_HEIGHT))
 bg.fill(GRAY)
 
 
-def draw_win(cars, road, world, GEN):     #x e y sono le coordinate della macchina migliore
+def draw_win(cars, road, world, GEN):     
     road.draw(world)
     for car in cars:
         car.draw(world)
@@ -28,8 +28,7 @@ def draw_win(cars, road, world, GEN):     #x e y sono le coordinate della macchi
     world.bestNN.draw(world)
 
     py.display.update()
-    world.win.blit(bg, (0,0))       #blit dello sfondo subito dopo l'update così se ho delle draw prima della draw_win non vengono coperte dallo sfondo
-
+    world.win.blit(bg, (0,0))       
 def main(genomes = [], config = []):
     global GEN
     GEN += 1
