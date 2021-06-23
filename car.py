@@ -101,8 +101,6 @@ class Car:
         self.x = self.x + self.vel * sin(radians(self.rot))
         self.y = self.y - self.vel * cos(radians(self.rot)) 
 
-        print("coord: ("+str(self.x)+", "+str(self.y)+")   vel: "+str(self.vel)+"   acc: "+str(self.acc) + "    rot: "+str(self.rot))
-
         return (self.x, self.y)
 
     def draw(self, world):

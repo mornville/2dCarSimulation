@@ -28,7 +28,9 @@ def draw_win(cars, road, world, GEN):
     world.bestNN.draw(world)
 
     py.display.update()
-    world.win.blit(bg, (0,0))       
+    world.win.blit(bg, (0,0))  
+
+## Fitness function         
 def main(genomes = [], config = []):
     global GEN
     GEN += 1
@@ -78,7 +80,7 @@ def main(genomes = [], config = []):
             y_old = car.y
             (x, y) = car.move(road,t)
 
-            if t>10 and (car.detectCollision(road) or y > world.getBestCarPos()[1] + BAD_GENOME_TRESHOLD or y>y_old or car.vel < 0.1): #il t serve a evitare di eliminare macchine nei primi tot frame (nei primi frame getCollision() restituisce sempre true)
+            if t>10 and (car.detectCollision(road) or y > world.getBestCarPos()[1] + BAD_GENOME_TRESHOLD or y>y_old or car.vel < 0.1): 
                 ge[i].fitness -= 1
                 cars.pop(i)
                 nets.pop(i)

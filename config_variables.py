@@ -4,8 +4,8 @@ py.font.init()
 
 #=================== General constants ==================================
 FPS = 30
-WIN_WIDTH = 1800
-WIN_HEIGHT = 1000
+WIN_WIDTH = 720
+WIN_HEIGHT = 720
 STARTING_POS = (WIN_WIDTH/2, WIN_HEIGHT-100)
 SCORE_VEL_MULTIPLIER = 0.00                     #bonus for faster cars
 BAD_GENOME_TRESHOLD = 200                       #if a car is too far behind it is removed

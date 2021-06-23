@@ -14,7 +14,7 @@ class NN:
         self.nodes = []
         self.genome = genome
         self.pos = (int(pos[0]+NODE_RADIUS), int(pos[1]))
-        input_names = ["Sensor T", "Sensor TR", "Sensor R", "Sensor BR", "Sensor B", "Sensor BL", "Sensor L", "Sensor TL", "Speed"]
+        input_names = ["Sensor N", "Sensor S", "Sensor E", "Sensor W", "Sensor NE", "Sensor NW", "Sensor SE", "Sensor SW", "Speed"]
         output_names = ["Accelerate", "Brake", "Turn Left", "Turn Right"]
         middle_nodes = [n for n in genome.nodes.keys()]
         nodeIdList = []
